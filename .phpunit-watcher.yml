@@ -1,0 +1,6 @@
+notifications:
+  passingTests: false
+  failingTests: false
+hideManual: true
+phpunit:
+  testdox: true

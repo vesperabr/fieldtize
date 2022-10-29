@@ -1,0 +1,41 @@
+{
+    "name": "vesperabr/fieldtize",
+    "description": "Parse, validate and format numbers easily.",
+    "keywords": [
+        "numbers",
+        "fields",
+        "phone"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/vesperabr/fieldtize",
+    "authors": [
+        {
+            "name": "Ricardo Monteiro",
+            "email": "ricardo.monteiro@vespera.com.br"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "spatie/phpunit-watcher": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vespera\\Fieldtize\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:dox": "vendor/bin/phpunit --testdox",
+        "test:watch": [
+            "Composer\\Config::disableProcessTimeout",
+            "phpunit-watcher watch --testdox < /dev/tty"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
