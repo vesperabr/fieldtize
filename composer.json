@@ -34,7 +34,7 @@
         "test:dox": "vendor/bin/phpunit --testdox",
         "test:watch": [
             "Composer\\Config::disableProcessTimeout",
-            "phpunit-watcher watch --testdox < /dev/tty"
+            "phpunit-watcher watch < /dev/tty"
         ]
     },
     "config": {

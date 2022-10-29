@@ -21,9 +21,11 @@ class Phone extends Field
     private function process(): void
     {
         $phoneNumberUtil = PhoneNumberUtil::getInstance();
-        $phone = $phoneNumberUtil->parse($this->original, 'BR');
 
-        $this->isValid = $phoneNumberUtil->isValidNumber($phone);
+        try {
+            $phone = $phoneNumberUtil->parse($this->original, 'BR');
+            $this->isValid = $phoneNumberUtil->isValidNumber($phone);
+        } catch (\Throwable $th) {}
 
         if ($this->isValid) {
             $this->value = $phoneNumberUtil->format($phone, PhoneNumberFormat::NATIONAL);
