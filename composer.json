@@ -1,6 +1,6 @@
 {
     "name": "vesperabr/fieldtize",
-    "description": "Parse, validate and format numbers easily.",
+    "description": "Parse, validate and format fields easily.",
     "keywords": [
         "numbers",
         "fields",
